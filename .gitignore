@@ -25,3 +25,9 @@ Thumbs.db
 dist/
 build/
 *.egg-info/
+
+#agents folder that contains openai agent    
+.agent  
+
+#md files
+*.md
