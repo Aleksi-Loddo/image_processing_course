@@ -62,13 +62,12 @@ image = Image.open(image_path)
 image_array = np.array(image)
 
 kernel = np.array([
-    [1,  4,  7,  4, 1],
-    [4, 16, 26, 16, 4],
-    [7, 26, 41, 26, 7],
-    [4, 16, 26, 16, 4],
-    [1,  4,  7,  4, 1] 
+    [0.00390625, 0.015625, 0.0234375, 0.015625, 0.00390625],
+    [0.015625, 0.0625, 0.09375, 0.0625, 0.015625],
+    [0.0234375, 0.09375, 0.140625, 0.09375, 0.0234375],
+    [0.015625, 0.0625, 0.09375, 0.0625, 0.015625],
+    [0.00390625, 0.015625, 0.0234375, 0.015625, 0.00390625]
 ])
-kernel = kernel / 273.0
 
 filtered_image = convolution_and_blur_filter(image_array, kernel)
 filtered_image = Image.fromarray(filtered_image)
